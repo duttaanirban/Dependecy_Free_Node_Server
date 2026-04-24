@@ -1,6 +1,4 @@
-# SRM Full Stack Engineering Challenge
 
-This project implements the required product from the paper:
 
 - `POST /bfhl` REST API
 - a single-page frontend to submit node edges and inspect the response
