@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BFHL Hierarchy Explorer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <p class="eyebrow">SRM Full Stack Challenge</p>
+        <h1>Hierarchy Builder for the <code>/bfhl</code> API</h1>
+        <p class="intro">
+          Paste comma-separated edges like <code>A-&gt;B, A-&gt;C, B-&gt;D</code> or one per line,
+          submit them to the backend, and inspect tree groups, cycles, duplicates, and invalid entries.
+        </p>
+      </section>
+
+      <section class="panel input-panel">
+        <label for="edgeInput">Enter edges</label>
+        <textarea id="edgeInput" spellcheck="false">A->B
+A->C
+B->D
+C->E
+E->F
+X->Y
+Y->Z
+Z->X
+P->Q
+Q->R
+G->H
+G->H
+G->I
+hello
+1->2
+A-></textarea>
+        <div class="actions">
+          <button id="submitButton" type="button">Submit to /bfhl</button>
+          <button id="sampleButton" type="button" class="ghost">Load sample</button>
+        </div>
+        <p class="hint">Whitespace is trimmed before validation. Duplicate edges are listed once.</p>
+      </section>
+
+      <section id="status" class="status" aria-live="polite"></section>
+
+      <section id="results" class="results hidden">
+        <div class="summary-grid"></div>
+        <div class="meta-grid"></div>
+        <div class="hierarchy-list"></div>
+        <div class="raw-response panel"></div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+  </html>

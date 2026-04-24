@@ -1,0 +1,18 @@
+{
+  "name": "srm-full-stack-challenge",
+  "version": "1.0.0",
+  "description": "SRM Full Stack Engineering Challenge solution with a REST API and single-page frontend.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "node",
+    "api",
+    "frontend",
+    "srm",
+    "challenge"
+  ],
+  "license": "MIT"
+}
